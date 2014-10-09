@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ltie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ltie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Improved - AHAH Example</title>
+	<link href="../../petal/css/all.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../../petal/css/improved.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../../petal/css/jqwd.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	
+	<script src="../../petal/js/base.min.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+ <style type="text/css">
+    img { max-width: 100% }
+     html, body, ul {
+			height:100%;
+			margin:0;
+			padding:0;
+			font-family: 'SourceSansProLight', Arial, Helvetica, Geneva, sans-serif;
+
+		}
+	#col_1 {
+		margin-left:.4em;
+		height:100%;
+		position:fixed;
+		width:76px;
+		left:0;
+		top:0;
+	}
+	li {
+		list-style-type: none;
+	}
+
+      #flower-items a {
+      	text-decoration: none;
+      	list-style-type: none;
+      	padding:0;
+      	margin:0;
+      	color:black;
+      	float:left;
+      	padding-bottom:2em;
+      	font-size:.8em;
+
+      }
+      .submenu li {
+      	padding-left:.4em;
+      	
+      }
+      h1 {
+      	font-size: .6em;
+      	font-family: 'Press Start 2P', cursive;
+      	line-height: 167%;
+      }
+      #col_2 {
+      	position:relative;
+		height:100%;
+		margin-left:78px;
+		padding:0px;
+		top:0;
+		right:0;
+		padding-left:3em;
+		padding-right:2em;
+
+      }
+
+
+
+
+ </style>
+
+<body>
+	<div id="content">
+		
+		<div id="col_1" role="navigation">
+		
+			<h1>Franny <br>Mendes <br>Levitin</h1>
+			<ul id="flower-items">
+			<li>
+				<a href="calla.html">Artwork</a>
+				<ul class="submenu">
+					<li>
+						<a href="minecraft.html">Painted Minecraft</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="sunflowers.html">Interaction Design</a>
+			</li>
+			<li>
+				<a href="iris.html">Graphic Design</a>
+			</li>
+			<li>
+				<a href="alstromeria.html">Info</a>
+				
+			</li>
+			
+			</ul>
+		</div>
+
+
+		<div id="col_2">
+			<div id="flower-description">
+				<h3>Learn more</h3>
+				
+				<p>
+				Choose a flower arrangement to find out more about it.
+				</p>
+			</div>
+		</div>
+
+	
+	
+	
+		
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../petal/js/jquery-1.8.3.min.js"><\/script>')</script>
+<script src="../../petal/js/plugins.min.js"></script>
+<script src="../../petal/js/all.js"></script>
+<script src="../../petal/js/improved.js"></script>
+<script>
+$(document).ready(function(e) {
+
+var $flowers = $('#flower-items');
+
+$('#flower-items').find('a').on('click', function(e){
+	e.preventDefault();
+	
+	var $desc = $('#flower-description');
+	
+	switch($(this).attr('href')) {
+		case 'calla.html' :
+			$desc.load('fragments/lilies.html');
+			break;
+		case 'minecraft.html' :
+			$desc.load('fragments/lilies.html');
+			break;
+
+		case 'sunflowers.html' :
+			$desc.load('fragments/sunflower.html');
+			break;
+		case 'iris.html' :
+			$desc.load('fragments/irises.html');
+			break;
+		case 'alstromeria.html' :
+			$desc.load('fragments/peruvian.html');
+			break;
+		
+	}
+});
+
+
+});
+</script>
+
+</body>
+
+</html>

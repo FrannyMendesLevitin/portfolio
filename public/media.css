@@ -1,0 +1,8 @@
+ul.article {
+	padding:3em 4em 1.5em 3em;
+	text-align: justified;
+}
+.captionTitle {
+	font-size: 1.2em;
+	/*padding:.4em;*/
+}

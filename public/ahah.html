@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ltie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ltie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ltie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Franny Mendes Levitin</title>
+	<link rel="stylesheet" href="style.css"/>
+
+	<link rel="stylesheet" media="(max-width: 800px)" href="media.css" />
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	
+	
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="accordian.js"> </script>
+</head>
+
+ <style type="text/css">
+   
+
+
+
+ </style>
+
+<body>
+	<div id="content">
+		
+		<div id="cssmenu" role="navigation">
+		
+			<h1>Franny <br>Mendes <br>Levitin</h1>
+			<ul id="menu-items">
+				<li class="categories"><a href="minecraft.html">Artwork</a>
+					<ul>
+						<li class="submenu"><a href="minecraft.html">Painted Minecraft</a></li>
+						<li class="submenu"><a href="landscape-what.html">What's landscape</a></li>
+						<li class="submenu"><a href="data-info.html">Data or Information</a></li>
+						<li class="submenu"><a href="digital-physical.html">Digital or Physical</a></li>
+					</ul>
+				</li>
+				<li class="categories"><a href="interaction-design.html">Interaction Design</a>
+					<ul>
+						<li class="submenu"><a href="tumblrHE">Heuristic Evaluation on Tumblr</a></li>
+						<li class="submenu"><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
+						<li class="submenu"><a href="photoshopUse.html">Persona Creation: Harriet Who</a></li>
+
+					</ul>
+				</li>
+				<li class="categories">
+					<a href="graphicDesign.html">Graphic Design</a>
+				</li>
+				<li class="categories">
+					<a href="http://fmendesl.tumblr.com/archive/2014/3">Info</a>
+				</li>
+			
+			</ul>
+		</div>
+
+
+		<div id="col_2">
+			<div id="project-description">
+				<h3>Learn more</h3>
+				
+				<p>
+				Choose a flower arrangement to find out more about it.
+				</p>
+			</div>
+		</div>
+
+	
+	
+	
+		
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../petal/js/jquery-1.8.3.min.js"><\/script>')</script>
+<script src="../../petal/js/plugins.min.js"></script>
+<script src="../../petal/js/all.js"></script>
+<script src="../../petal/js/improved.js"></script>
+<script>
+$(document).ready(function(e) {
+
+var $flowers = $('#menu-items');
+
+$('#menu-items').find('a').on('click', function(e){
+	e.preventDefault();
+	
+	var $desc = $('#project-description');
+	
+	switch($(this).attr('href')) {
+		case 'calla.html' :
+			$desc.load('fragments/lilies.html');
+			break;
+		case 'minecraft.html' :
+			$desc.load('fragments/minecraft-img.html');
+			break;
+
+		case 'sunflowers.html' :
+			$desc.load('fragments/interaction-design.html');
+			break;
+		case 'graphicDesign.html' :
+			$desc.load('fragments/hTumblr.html');
+			break;
+		case 'info.html' :
+			$desc.load('fragments/peruvian.html');
+			break;
+		
+	}
+});
+
+
+});
+</script>
+ <script>
+ var json_data; 
+ ($.get('http://localhost:3000', function(data){ 
+ 	json_data = data 
+	for (i = 0; i < json_data.posts.length; i++) { 
+		if(JSON.stringify(json_data.posts[i].tags).indexOf('books') !== -1){
+			$('p').prepend('<img src=' + JSON.stringify(json_data.posts[i].photos[0].original_size.url) + ' />');
+		}
+	} 
+ }));
+
+ 
+</script>
+</body>
+
+</html>
