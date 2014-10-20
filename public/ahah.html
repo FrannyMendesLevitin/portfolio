@@ -29,31 +29,35 @@
 <body>
 	<div id="content">
 		
-		<div id="cssmenu" role="navigation">
+		<div id="cssmenu"  role="navigation">
 		
 			<h1>Franny <br>Mendes <br>Levitin</h1>
 			<ul id="menu-items">
 				<li class="categories"><a href="minecraft.html">Artwork</a>
 					<ul>
-						<li class="submenu"><a href="minecraft.html">Painted Minecraft</a></li>
-						<li class="submenu"><a href="landscape-what.html">What's landscape</a></li>
-						<li class="submenu"><a href="data-info.html">Data or Information</a></li>
-						<li class="submenu"><a href="digital-physical.html">Digital or Physical</a></li>
+						<li class="submenu1"><a href="minecraft.html">Painted Minecraft</a></li>
+						<li class="submenu1"><a href="landscape-what.html">What's landscape</a></li>
+						<li class="submenu1"><a href="data-info.html">Data or Information</a></li>
+						<li class="submenu1"><a href="digital-physical.html">Digital or Physical</a></li>
 					</ul>
 				</li>
 				<li class="categories"><a href="interaction-design.html">Interaction Design</a>
 					<ul>
-						<li class="submenu"><a href="tumblrHE">Heuristic Evaluation on Tumblr</a></li>
-						<li class="submenu"><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
-						<li class="submenu"><a href="photoshopUse.html">Persona Creation: Harriet Who</a></li>
+						<li class="submenu2"><a href="tumblr-h.html">Heuristic Evaluation on Tumblr</a></li>
+						<li class="submenu2"><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
+						<li class="submenu2"><a href="photoshop-.html">Persona Creation: Harriet Who</a></li>
 
 					</ul>
 				</li>
-				<li class="categories">
-					<a href="graphicDesign.html">Graphic Design</a>
+				<li class="categories"><a href="graphicDesign.html">Graphic Design</a>
+					<ul>
+						<li class="submenu3"><a href="caves-poster.html">Caves Poster</a></li>
+					</ul>
 				</li>
-				<li class="categories">
-					<a href="http://fmendesl.tumblr.com/archive/2014/3">Info</a>
+				<li class="categories"><a href="http://fmendesl.tumblr.com/archive/2014/3">Info</a>
+					<ul>
+						<li class="submenu4"><a href="caves-poster.html">Caves Poster</a></li>
+					</ul>
 				</li>
 			
 			</ul>
@@ -80,9 +84,8 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../petal/js/jquery-1.8.3.min.js"><\/script>')</script>
-<script src="../../petal/js/plugins.min.js"></script>
-<script src="../../petal/js/all.js"></script>
-<script src="../../petal/js/improved.js"></script>
+
+<!-- - - - - - - - - - - - - -load html fragments -->
 <script>
 $(document).ready(function(e) {
 
@@ -110,13 +113,13 @@ $('#menu-items').find('a').on('click', function(e){
 		case 'info.html' :
 			$desc.load('fragments/peruvian.html');
 			break;
-		
 	}
 });
 
-
 });
 </script>
+
+<!-- - - - - - - - - - - - - - for tumblr api  -->
  <script>
  var json_data; 
  ($.get('http://localhost:3000', function(data){ 
@@ -127,9 +130,16 @@ $('#menu-items').find('a').on('click', function(e){
 		}
 	} 
  }));
-
- 
 </script>
+<!-- accordian test  -->
+<script>
+ $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+</script>
+
 </body>
 
 </html>
