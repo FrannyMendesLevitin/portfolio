@@ -142,7 +142,7 @@ $('#menu-items').find('a').on('click', function(e){
 	$('#menu-items li a').click(function(){
 	event.preventDefault();
     $(this).siblings('#menu-items [class^=submenu').slideToggle('slow');
-    // $('#menu-items li:first-child')addClass('active');
+     $('#menu-items > li:nth-child(1) > ul > li:nth-child(1) > a').addClass('active');
 
 });
 </script>
