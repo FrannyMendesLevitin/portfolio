@@ -29,13 +29,17 @@ li {
     padding-top:.9em;
     font-size:.85em;  	
     }
-
+#menu-items .category>a {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
 .active{
-	color:red !important;
+	color:#BA55D3 !important;
 }
 li.categories {
 	margin-top:.5em;
 	font-size:1em;
+
 }
 li.submenu{
    padding:1.6em .4em;
@@ -86,6 +90,13 @@ li.caption {
 	text-align: justified;
 	}
 }*/
+.project-img-set img {
+	padding-bottom:.4em;
+	float:right;
+}
+ #project-img-set img{
+ 	display:block !important;
+ }
 
 
 

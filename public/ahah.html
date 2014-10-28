@@ -35,7 +35,7 @@
 		
 			<h1>Franny <br>Mendes <br>Levitin</h1>
 			<ul id="menu-items">
-				<li class="category"><a href="minecraft.html">Artwork</a>
+				<li class="category"><a href="artwork.html">Artwork</a>
 					<ul class="submenu1">
 						<li><a href="minecraft.html">Painted Minecraft</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
@@ -46,6 +46,7 @@
 				<li class="category"><a href="interaction-design.html">Interaction Design</a>
 					<ul class="submenu2">
 						<li><a href="tumblr-h.html">Heuristic Evaluation on Tumblr</a></li>
+						<li><a href="burst.html">Mobile Application</a></li>
 						<li><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
 						<li><a href="photoshop-.html">Persona Creation: Harriet Who</a></li>
 
@@ -88,7 +89,6 @@
 <script>window.jQuery || document.write('<script src="../../petal/js/jquery-1.8.3.min.js"><\/script>')</script>
 
 <!-- - - - - - - - - - - - - -load html fragments -->
-<!-- - - - - - - - - - - - - -load html fragments -->
 <script>
 $(document).ready(function(e) {
 
@@ -97,19 +97,35 @@ var $menu = $('#menu-items');
 $('#menu-items').find('a').on('click', function(e){
 	e.preventDefault();
 
-
-	
 	var $desc = $('#project-description');
 	
 	switch($(this).attr('href')) {
-		
+		// artwork 
+		case 'artwork.html' :
+			$desc.load('fragments/minecraft-img.html');
+			break;
 		case 'minecraft.html' :
 			$desc.load('fragments/minecraft-img.html');
 			break;
-
-		case 'sunflowers.html' :
-			$desc.load('fragments/interaction-design.html');
+		case 'landscape-what.html' :
+			$desc.load('fragments/landscape-what.html');
 			break;
+
+		// interaction
+
+		case 'interaction-design.html' :
+			$desc.load('fragments/hTumblr.html');
+			break;
+		case 'hTumblr.html' :
+			$desc.load('fragments/hTumblr.html');
+			break;
+		case 'burst.html' :
+			$desc.load('fragments/burst.html');
+			break;
+
+
+		// graphic Design 
+
 		case 'graphicDesign.html' :
 			$desc.load('fragments/hTumblr.html');
 			break;
@@ -135,10 +151,11 @@ $('#menu-items').find('a').on('click', function(e){
 	} 
  }));
 </script>
-<!-- toggle submenu -->
+<!-- highlighting active submenu item-->
 <script type="text/javascript">
 	
 	$('#menu-items [class^=submenu]').hide(); //Hide children by default
+
 	$('a').click(function(){
 		$('a').removeClass('active');
 		$(this).addClass('active');
@@ -163,10 +180,19 @@ $('#menu-items').find('a').on('click', function(e){
     	$('a').removeClass('active');
      	$('#menu-items > li:nth-child(3) > ul > li:nth-child(1) > a').addClass('active');
 	});
+</script>
+<!-- check if any of the submenus in a category are active, if so hide category submenu -->
+<script type="text/javascript">
+	$(document).ready(function(e) {
 
+	$('.category').click (function(){
+		e.preventDefault();
+		$('.category').each(function(i){
+		$(this).siblings('#menu-items [class^=submenu').hide();
+		}
+		
 
-
-
+	});
 </script>
 
 </body>
