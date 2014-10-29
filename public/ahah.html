@@ -35,7 +35,7 @@
 		
 			<h1>Franny <br>Mendes <br>Levitin</h1>
 			<ul id="menu-items">
-				<li class="category"><a href="artwork.html">Artwork</a>
+				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu1">
 						<li><a href="minecraft.html">Painted Minecraft</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
@@ -43,7 +43,7 @@
 						<li><a href="digital-physical.html">Digital or Physical</a></li>
 					</ul>
 				</li>
-				<li class="category"><a href="interaction-design.html">Interaction Design</a>
+				<li class="cat" id="category2"><a href="interaction-design.html">Interaction Design</a>
 					<ul class="submenu2">
 						<li><a href="tumblr-h.html">Heuristic Evaluation on Tumblr</a></li>
 						<li><a href="burst.html">Mobile Application</a></li>
@@ -52,12 +52,12 @@
 
 					</ul>
 				</li>
-				<li class="category"><a href="graphicDesign.html">Graphic Design</a>
+				<li class="cat" id="category3"><a href="graphicDesign.html">Graphic Design</a>
 					<ul class="submenu3">
 						<li><a href="caves-poster.html">Caves Poster</a></li>
 					</ul>
 				</li>
-				<li class="category"><a href="http://fmendesl.tumblr.com/archive/2014/3">Info</a>
+				<li class="cat" id="category4"><a href="http://fmendesl.tumblr.com/archive/2014/3">Info</a>
 					<ul>
 						<li class="submenu4"><a href="caves-poster.html">Caves Poster</a></li>
 					</ul>
@@ -69,17 +69,11 @@
 
 		<div id="col_2">
 			<div id="project-description">
-				<h3>Learn more</h3>
+				<img src="images/digitalCanvas-04-150res.jpg">
 				
-				<p>
-				hi hihihihihi
-				</p>
+				
 			</div>
 		</div>
-
-	
-	
-	
 		
 	</div>
 </div>
@@ -181,16 +175,30 @@ $('#menu-items').find('a').on('click', function(e){
      	$('#menu-items > li:nth-child(3) > ul > li:nth-child(1) > a').addClass('active');
 	});
 </script>
-<!-- check if any of the submenus in a category are active, if so hide category submenu -->
+<!-- check if any of the submenus in a category are active, if so hide other category submenus -->
 <script type="text/javascript">
-	$(document).ready(function(e) {
-
-	$('.category').click (function(){
-		e.preventDefault();
-		$('.category').each(function(i){
-		$(this).siblings('#menu-items [class^=submenu').hide();
-		}
+	$(document).ready(function() {
 		
+		$('#category1').on('click', function (){
+			$('.submenu2, .submenu3, .submenu4').hide();
+			$('.submenu1').show();
+		});
+
+		$('#category2').on('click', function (){
+			$('.submenu1, .submenu3, .submenu4').hide();
+			$('.submenu2').show();
+		});
+
+		$('#category3').on('click', function (){
+			$('.submenu1, .submenu2, .submenu4').hide();
+			$('.submenu3').show();
+		});
+
+		$('#category4').on('click', function (){
+			$('.submenu1, .submenu2, .submenu3').hide();
+			$('.submenu4').show();
+		});
+
 
 	});
 </script>
