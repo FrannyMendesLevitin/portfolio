@@ -1,4 +1,4 @@
-img { max-width: 100% }
+img { max-width: 100%}
 html, body, ul {
 		height:100%;
 		margin:0;
@@ -7,6 +7,24 @@ html, body, ul {
 		letter-spacing:.15em;
 		/*line-height: 1.4em;*/
 	}
+#cover img {
+	max-height: 100%;
+	max-width: 100%;
+	z-index:-2;
+
+}
+#gif {
+	position:absolute;
+	top:50px;
+	right:0px;
+	width:100%;
+	z-index:1;
+}
+.coverGif {
+	position:absolute;
+	bottom:10px;
+	z-index:1;
+}
 #cssmenu {
 	margin-left:.4em;
 	height:100%;
@@ -89,6 +107,8 @@ li.caption {
 .project-img-set img {
 	padding-bottom:.4em;
 	float:right;
+	max-height: 100%
+	overflow:hidden;
 	
 }
 .project-img-set {
