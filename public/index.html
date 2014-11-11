@@ -17,16 +17,13 @@
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	
+	<!--<script src="js/active1.js"></script>-->
 
 
 	
 </head>
 
  <style type="text/css">
-   
-	.active {
-		color:red;
-	}
 
 
  </style>
@@ -62,6 +59,8 @@
 				<li class="cat" id="category3"><a href="graphicDesign.html">Graphic Design</a>
 					<ul class="submenu" id="submenu3">
 						<li><a href="caves-poster.html">Caves Poster</a></li>
+						<li><a href="burstLogo.html">Logo Design</a></li>
+
 					</ul>
 				</li>
 
@@ -103,8 +102,7 @@
 
 <!-- - - - - - - - - - - - - -load html fragments -->
 <script>
-$(document).ready(function(e) {
-
+$(document).ready(function(e) { 
 var $menu = $('#menu-items');
 
 $('#menu-items').find('a').on('click', function(e){
@@ -122,8 +120,9 @@ $('#menu-items').find('a').on('click', function(e){
 			break;
 		case 'landscape-what.html' :
 			$desc.load('fragments/landscape-what.html');
-			$('.active').removeClass('active');
-			$(this).addClass('active');
+			break;
+		case 'data-info.html' :
+			$desc.load('fragments/data-info.html');
 			break;
 
 		// interaction
@@ -142,35 +141,31 @@ $('#menu-items').find('a').on('click', function(e){
 		// graphic Design 
 
 		case 'graphicDesign.html' :
-			$desc.load('fragments/hTumblr.html');
+			$desc.load('fragments/cavesPoster.html');
 			break;
+		case 'burstLogo.html' :
+			$desc.load('fragments/burstLogo.html');
+			break;
+
+
+
 		case 'info.html' :
+			$desc.load('fragments/info.html');
+			break;
+		case 'about.html' :
 			$desc.load('fragments/info.html');
 			break;
 		case 'news.html' :
 			$desc.load('fragments/news.html');
 			break;
 	}
+
 });
 
 });
 </script>
-
-
-<!-- - - - - - - - - - - - - - for tumblr api  -->
- <script>
- var json_data; 
- ($.get('http://localhost:3000', function(data){ 
- 	json_data = data 
-	for (i = 0; i < json_data.posts.length; i++) { 
-		if(JSON.stringify(json_data.posts[i].tags).indexOf('books') !== -1){
-			$('p').prepend('<img src=' + JSON.stringify(json_data.posts[i].photos[0].original_size.url) + ' />');
-		}
-	} 
- }));
-</script>
-
 <!-- check if any of the submenus in a category are active, if so hide other category submenus -->
+
 <script type="text/javascript">
 	$(document).ready(function() {
 
@@ -178,9 +173,12 @@ $('#menu-items').find('a').on('click', function(e){
 
 		
 		$('#category1').on('click', function (){
-			$('#submenu1 > li:nth-child(1) > a').addClass('active');
-			$('#submenu2, #submenu3, #submenu4').hide();
-			$('#submenu1').show();
+			if($('#submenu1').find('.active').length == 0)
+			{
+				$('#submenu1 > li:nth-child(1) > a').addClass('active');
+				$('#submenu2, #submenu3, #submenu4').hide();
+				$('#submenu1').show();
+			} 
 		});
 
 		$('#category2').on('click', function (){
@@ -201,9 +199,38 @@ $('#menu-items').find('a').on('click', function(e){
 			$('#submenu4').show();
 		});
 
+		$('.submenu').find('a').click(function (e){
+			$(this).parents('.submenu').find('.active').removeClass('active');
+			$(this).addClass('active');
+			e.stopPropagation();
+		});
 	});
 </script>
 
+<!-- change active class -->
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('.submenu > li:nth-child() > a').on('click', function(){
+
+			$('this').addClass('active');
+
+		}
+	});
+</script>
+
+
+<!-- - - - - - - - - - - - - - for tumblr api  -->
+ <script>
+ var json_data; 
+ ($.get('http://localhost:3000', function(data){ 
+ 	json_data = data 
+	for (i = 0; i < json_data.posts.length; i++) { 
+		if(JSON.stringify(json_data.posts[i].tags).indexOf('books') !== -1){
+			$('p').prepend('<img src=' + JSON.stringify(json_data.posts[i].photos[0].original_size.url) + ' />');
+		}
+	} 
+ }));
+</script>
 
 
 
