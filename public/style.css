@@ -100,6 +100,9 @@ h1 {
 	font-size: .7em;
     font-family: 'Press Start 2P', cursive;
     line-height: 207%;
+    text-decoration: none;
+    list-style-type: none;
+    color:black;
 }
 #col_2 {
     position:relative;
@@ -114,7 +117,7 @@ h1 {
 /*#project-description */
 
 ul.article {
-	padding:3em 8em 1.5em 6em;
+	padding:3em 8em 1.5em 8em;
 	text-align: justified;
 
 
@@ -181,7 +184,7 @@ div.data-imgBox {
   	margin:auto;
 }
 .data-imgBox img{
-	height:80vh;
+	height:91vh;
 	white-space:nowrap; 
   	overflow:scroll;
   	display:inline;
@@ -196,13 +199,22 @@ div.art-imgBox {
   	-moz-column-count: 2;
   	column-count: 2;*/
 }
+div.art-imgBox {
+	width:1100px;
+	height:90%;
+	white-space:nowrap; 
+  	overflow:scroll;
+  	margin-auto
+}
 .art-imgBox img{
-	hight:90vh;
+	max-height:90vh;
+	display:inline;
+	/*overflow: scroll;
+	white-space: nowrap;*/
+
 
 }
-.artimgBox img{
-	float:left;
-}
+
 div.newsArt {
 	padding-bottom:3em;
 	text-align:left;

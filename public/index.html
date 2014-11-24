@@ -33,15 +33,15 @@
 		
 		<div id="cssmenu"  role="navigation">
 		
-			<h1>Franny <br>Mendes <br>Levitin</h1>
+			<a href="index.html"><h1>Franny <br>Mendes <br>Levitin</h1></a>
 			<ul id="menu-items">
 
 				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
-						<li><a href="minecraft.html" id="active">Painted Minecraft</a></li>
+						<li><a href="minecraft.html" id="active">Navigation Spaces</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
 						<li><a href="data-info.html">Data or Information</a></li>
-						<li><a href="digital-physical.html">Digital or Physical</a></li>
+						<li><a href="dig-phy.html">Digital or Physical</a></li>
 					</ul>
 				</li>
 
@@ -52,6 +52,7 @@
 						<li><a href="burst.html">Mobile Application</a></li>
 						<li><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
 						<li><a href="photoshop-.html">Persona Creation: Harriet Who</a></li>
+						<!-- <li><a href="ux-dialog.html">UX Realizations or discussion</a></li> -->
 					</ul>
 				</li>
 
@@ -124,6 +125,11 @@ $('#menu-items').find('a').on('click', function(e){
 		case 'data-info.html' :
 			$desc.load('fragments/data-info.html');
 			break;
+		case 'dig-phy.html' :
+			$desc.load('fragments/dig-phy.html');
+			break;
+
+		
 
 		// interaction
 
