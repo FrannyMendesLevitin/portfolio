@@ -8,11 +8,14 @@ html, body, ul {
 		font-family: 'SourceSansProLight', Arial, Helvetica, Geneva, sans-serif;
 		letter-spacing:.13em;
 		/*line-height: 1.4em;*/
+
 	}
 #cover img {
 	max-height: 100%;
 	max-width: 100%;
 	z-index:-2;
+
+
 
 }
 #gif {
@@ -41,6 +44,19 @@ html, body, ul {
 	background: #fff;
 }
 
+#submenu1 > li:nth-child(2) > a, #submenu1 > li:nth-child(1) > a, #submenu1 > li:nth-child(3) > a, #submenu1 > li:nth-child(4) > a{
+	padding-top:10px;
+}
+#submenu2 > li:nth-child(2) > a, #submenu2 > li:nth-child(1) > a, #submenu2 > li:nth-child(3) > a, #submenu2 > li:nth-child(4) > a{
+	padding-top:10px;
+}
+#submenu3 > li:nth-child(2) > a, #submenu3 > li:nth-child(1) > a, #submenu3 > li:nth-child(3) > a, #submenu3 > li:nth-child(4) > a{
+	padding-top:10px;
+}
+#submenu4 > li:nth-child(2) > a, #submenu4 > li:nth-child(1) > a, #submenu4 > li:nth-child(3) > a, #submenu4 > li:nth-child(4) > a{
+	padding-top:10px;
+}
+
 li {
 	list-style-type: none;
 }
@@ -52,7 +68,6 @@ li {
     margin:0;
     color:black;
     float:left;
-    
     
     }
 .submenu a {
@@ -99,7 +114,7 @@ h1 {
 /*#project-description */
 
 ul.article {
-	padding:3em 7em 1.5em 5em;
+	padding:3em 8em 1.5em 6em;
 	text-align: justified;
 
 
@@ -124,16 +139,17 @@ li.caption {
 	}
 }*/
 .project-img-set img {
-	padding-bottom:.5em;
-	float:right;
-	display: block;
+	padding-bottom:2%;
+	
 	max-height: 100vh;
 	overflow:hidden;
 	position: relative;
+	display: block;
+	margin:0 auto;
 	
-}
+/*}
 .project-img-set {
-	max-width:100%;
+	width:100%;*/
 }
 div#burstImg {
 	position:absolute;
@@ -151,26 +167,38 @@ div#burstImg {
 	padding-right:2em;	
 }
 
-#submenu1 > li:nth-child(2) > a, #submenu1 > li:nth-child(1) > a, #submenu1 > li:nth-child(3) > a, #submenu1 > li:nth-child(4) > a{
-	padding-top:10px;
-}
-#submenu2 > li:nth-child(2) > a, #submenu2 > li:nth-child(1) > a, #submenu2 > li:nth-child(3) > a, #submenu2 > li:nth-child(4) > a{
-	padding-top:10px;
-}
-#submenu3 > li:nth-child(2) > a, #submenu3 > li:nth-child(1) > a, #submenu3 > li:nth-child(3) > a, #submenu3 > li:nth-child(4) > a{
-	padding-top:10px;
-}
-#submenu4 > li:nth-child(2) > a, #submenu4 > li:nth-child(1) > a, #submenu4 > li:nth-child(3) > a, #submenu4 > li:nth-child(4) > a{
-	padding-top:10px;
-}
-
 
 /*fragments*/
 
-.art-imgBox {
-	-webkit-column-count: 2;
+div.data-imgBox {
+	width:1100px;
+	height:90%;
+	overflow: scroll;
+	white-space: nowrap;
+	/*-webkit-column-count: 2;
   	-moz-column-count: 2;
-  	column-count: 2;
+  	column-count: 2;*/
+  	margin:auto;
+}
+.data-imgBox img{
+	height:80vh;
+	white-space:nowrap; 
+  	overflow:scroll;
+  	display:inline;
+
+}
+div.art-imgBox {
+	width:1200px;
+	height:90%;
+	/*overflow: hidden;*/
+	white-space: nowrap;
+	/*-webkit-column-count: 2;
+  	-moz-column-count: 2;
+  	column-count: 2;*/
+}
+.art-imgBox img{
+	hight:90vh;
+
 }
 .artimgBox img{
 	float:left;
@@ -183,27 +211,22 @@ b {
 	font-size: .5em;
 }
 h2.newsCap {
-	text-align:left;
-	margin-left:auto;
+	text-align: center;
 	font-size: 1.3em;
-	width:80%;
-	margin-right:auto;
 }
 #project-description > div.project-img-set > div:nth-child() > img:nth-child() {
 	right:0px;
 }
 div.artArt {
+	position: relative;
 	padding-bottom:3em;
-	width:100%;
-}
-#project-description > div.project-img-set > div:nth-child(2) > h2 {
-	text-align: left;
+	/*max-width:1200px;*/
 }
 #federer-desktop {
-	overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width:90vh;
+    width:100%;
+    
 }
-
+img.artArt {
+	padding-bottom: 2em;
+}
 

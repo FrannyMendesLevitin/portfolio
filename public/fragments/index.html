@@ -17,7 +17,7 @@
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	
-	<!--<script src="js/active1.js"></script>-->
+	<script src="js/active1.js"></script>
 
 
 	
@@ -102,7 +102,8 @@
 
 <!-- - - - - - - - - - - - - -load html fragments -->
 <script>
-$(document).ready(function(e) { 
+$(document).ready(function(e) {
+
 var $menu = $('#menu-items');
 
 $('#menu-items').find('a').on('click', function(e){
@@ -160,6 +161,9 @@ $('#menu-items').find('a').on('click', function(e){
 			break;
 	}
 
+	previousActive = $('#menu-items').find('#active');
+	$(previousActive).removeClass('active');
+	$(this).addClass('active');
 });
 
 });
@@ -173,56 +177,35 @@ $('#menu-items').find('a').on('click', function(e){
 
 		
 		$('#category1').on('click', function (){
-			if($('#submenu1').find('.active').length == 0)
-			{
-				$('.submenu').find('.active').removeClass('active');
-				$('#submenu1 > li:nth-child(1) > a').addClass('active');
-				$('#submenu2, #submenu3, #submenu4').hide();
-				$('#submenu1').show();
-			} 
+			$('#submenu1 > li:nth-child(1) > a').addClass('active');
+			$('#submenu2, #submenu3, #submenu4').hide();
+			$('#submenu1').show();
 		});
 
 		$('#category2').on('click', function (){
-			if($('#submenu2').find('.active').length == 0)
-			{
-				$('.submenu').find('.active').removeClass('active');
-				$('#submenu2 > li:nth-child(1) > a').addClass('active');
-				$('#submenu1, #submenu3, #submenu4').hide();
-				$('#submenu2').show();
-			}
+			$('#submenu2 > li:nth-child(1) > a').addClass('active');
+			$('#submenu1, #submenu3, #submenu4').hide();
+			$('#submenu2').show();
 		});
 
 		$('#category3').on('click', function (){
-			if($('#submenu3').find('.active').length == 0)
-			{
-				$('.submenu').find('.active').removeClass('active');
-				$('#submenu3 > li:nth-child(1) > a').addClass('active');
-				$('#submenu1, #submenu2, #submenu4').hide();
-				$('#submenu3').show();
-			}
+			$('#submenu3 > li:nth-child(1) > a').addClass('active');
+			$('#submenu1, #submenu2, #submenu4').hide();
+			$('#submenu3').show();
 		});
 
 		$('#category4').on('click', function (){
-			if($('#submenu4').find('.active').length == 0)
-			{
-				$('.submenu').find('.active').removeClass('active');
-				$('#submenu4 > li:nth-child(1) > a').addClass('active');
-				$('#submenu1, #submenu2, #submenu3').hide();
-				$('#submenu4').show();
-			}
+			$('#submenu4 > li:nth-child(1) > a').addClass('active');
+			$('#submenu1, #submenu2, #submenu3').hide();
+			$('#submenu4').show();
 		});
 
-		$('.submenu').find('a').click(function (e){
-			$('.submenu').find('.active').removeClass('active');
-			$(this).addClass('active');
-			e.stopPropagation();
-		});
 	});
 </script>
 
 <!-- change active class -->
 <script type="text/javascript">
-	$(document).ready(function (){
+	$(document).ready(function() {
 		$('.submenu > li:nth-child() > a').on('click', function(){
 
 			$('this').addClass('active');
