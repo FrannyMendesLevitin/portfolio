@@ -38,6 +38,7 @@
 
 				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
+						<li><a href="labtest.html" id="active">Lab Test Results</a></li>
 						<li><a href="minecraft.html" id="active">Navigation Spaces</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
 						<li><a href="data-info.html">Data or Information</a></li>
@@ -87,8 +88,6 @@
 
 				<marquee id="gif" direction=left><img src="images/cover/horse.gif"></marquee>
 				<src img="images/cover/math.gif" class="coverGif">
-				
-
 		
 				
 			</div>
@@ -114,7 +113,10 @@ $('#menu-items').find('a').on('click', function(e){
 	switch($(this).attr('href')) {
 		// artwork 
 		case 'artwork.html' :
-			$desc.load('fragments/minecraft-img.html');
+			$desc.load('fragments/labtest.html');
+			break;
+		case 'minecraft.html' :
+			$desc.load('fragments/labtest.html');
 			break;
 		case 'minecraft.html' :
 			$desc.load('fragments/minecraft-img.html');
@@ -129,8 +131,6 @@ $('#menu-items').find('a').on('click', function(e){
 			$desc.load('fragments/dig-phy.html');
 			break;
 
-		
-
 		// interaction
 
 		case 'interaction-design.html' :
@@ -143,7 +143,6 @@ $('#menu-items').find('a').on('click', function(e){
 			$desc.load('fragments/burst.html');
 			break;
 
-
 		// graphic Design 
 
 		case 'graphicDesign.html' :
@@ -152,8 +151,6 @@ $('#menu-items').find('a').on('click', function(e){
 		case 'burstLogo.html' :
 			$desc.load('fragments/burstLogo.html');
 			break;
-
-
 
 		case 'info.html' :
 			$desc.load('fragments/info.html');

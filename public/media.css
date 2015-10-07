@@ -6,3 +6,10 @@ ul.article {
 	font-size: 1.2em;
 	/*padding:.4em;*/
 }
+#cover img {
+	overflow: hidden;
+	/*max-width: 100%;*/
+	z-index:-2;
+	height:fixed;
+	position:fixed;
+}
