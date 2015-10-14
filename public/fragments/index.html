@@ -30,7 +30,7 @@
 
 <body>
 	<div id="content">
-		
+<!-- this is the menu -->
 		<div id="cssmenu"  role="navigation">
 		
 			<h1>Franny <br>Mendes <br>Levitin</h1>
@@ -38,7 +38,8 @@
 
 				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
-						<li><a href="minecraft.html" id="active">Painted Minecraft</a></li>
+						<li><a href="labtest.html" id="active">Lab Test Results</a></li>
+						<li><a href="minecraft.html">Painted Minecraft</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
 						<li><a href="data-info.html">Data or Information</a></li>
 						<li><a href="digital-physical.html">Digital or Physical</a></li>
@@ -76,7 +77,7 @@
 			</ul>
 		</div>
 
-
+<!-- this is the main content --> 
 		<div id="col_2">
 			<div id="project-description">
 				<div id="cover">
@@ -114,7 +115,7 @@ $('#menu-items').find('a').on('click', function(e){
 	switch($(this).attr('href')) {
 		// artwork 
 		case 'artwork.html' :
-			$desc.load('fragments/minecraft-img.html');
+			$desc.load('fragments/labtest.html');
 			break;
 		case 'minecraft.html' :
 			$desc.load('fragments/minecraft-img.html');

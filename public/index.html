@@ -39,10 +39,11 @@
 				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
 						<li><a href="labtest.html" id="active">Lab Test Results</a></li>
-						<li><a href="minecraft.html" id="active">Navigation Spaces</a></li>
+						<li><a href="minecraft.html">Navigation Spaces</a></li>
+<!-- should i call navigation space minecraft landscapes? -->
 						<li><a href="landscape-what.html">What's landscape</a></li>
 						<li><a href="data-info.html">Data or Information</a></li>
-						<li><a href="dig-phy.html">Digital or Physical</a></li>
+						<li><a href="dig-phy.html">Digital Physical</a></li>
 					</ul>
 				</li>
 
@@ -77,6 +78,7 @@
 			
 			</ul>
 		</div>
+	<!-- 	END OF MENU -->
 
 
 		<div id="col_2">
@@ -92,8 +94,16 @@
 				
 			</div>
 		</div>
-		
+
+
 	</div>
+
+</div>
+<div id="footer">
+	
+	<!-- <footer style="float:right;">
+		<p>some content doesn't contain direct sources.  Sorry for that, time needed to be prioritized for creating the content~HMW</p>
+	</footer> -->
 </div>
 
 
@@ -115,7 +125,7 @@ $('#menu-items').find('a').on('click', function(e){
 		case 'artwork.html' :
 			$desc.load('fragments/labtest.html');
 			break;
-		case 'minecraft.html' :
+		case 'labtest.html' :
 			$desc.load('fragments/labtest.html');
 			break;
 		case 'minecraft.html' :
