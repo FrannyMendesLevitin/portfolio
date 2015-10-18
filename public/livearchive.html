@@ -33,22 +33,20 @@
 		
 		<div id="cssmenu"  role="navigation">
 		
-			<a href="index.html"><h1>Frances <br>Mendes <br>Levitin</h1></a>
+			<a href="index.html"><h1>Franny <br>Mendes <br>Levitin</h1></a>
 			<ul id="menu-items">
 
-				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
+				<li class="cat" id="category1"><a href="livearchive.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
-						<li><a href="labtest.html" id="active">Lab Test Results</a></li>
-						<li><a href="minecraft.html">Navigation Spaces</a></li>
-<!-- should i call navigation space minecraft landscapes? -->
+						<li><a href="minecraft.html" id="active">Navigation Spaces</a></li>
 						<li><a href="landscape-what.html">What's landscape</a></li>
 						<li><a href="data-info.html">Data or Information</a></li>
-						<li><a href="dig-phy.html">Digital Physical</a></li>
+						<li><a href="dig-phy.html">Digital or Physical</a></li>
 					</ul>
 				</li>
 
 
-				<li class="cat" id="category2"><a href="interaction-design.html">User Experience</a>
+				<li class="cat" id="category2"><a href="interaction-design.html">Interaction Design</a>
 					<ul class="submenu" id="submenu2">
 						<li><a href="tumblr-h.html">Heuristic Evaluation on Tumblr</a></li>
 						<li><a href="burst.html">Mobile Application</a></li>
@@ -59,7 +57,7 @@
 				</li>
 
 
-				<li class="cat" id="category3"><a href="graphicDesign.html">Design</a>
+				<li class="cat" id="category3"><a href="graphicDesign.html">Graphic Design</a>
 					<ul class="submenu" id="submenu3">
 						<li><a href="caves-poster.html">Caves Poster</a></li>
 						<li><a href="burstLogo.html">Logo Design</a></li>
@@ -78,32 +76,81 @@
 			
 			</ul>
 		</div>
-	<!-- 	END OF MENU -->
 
 
 		<div id="col_2">
-			<div id="project-description">
-				<div id="cover">
-				<img src="images/digitalCanvas-04-150res.jpg">
-				</div>
-				<marquee id="gif" direction=left><img src="images/cover/fox.gif"></marquee>
+			    <div id="captionBox">
+        <ul class="article">
+            <!-- <li class="captionTitle">Minecraft Series, 2014. 42"x 32" Oil on canvas.</li> -->
+            <li class="caption">
 
-				<marquee id="gif" direction=left><img src="images/cover/horse.gif"></marquee>
-				<src img="images/cover/math.gif" class="coverGif">
-		
-				
-			</div>
+            	Through the process of layering information fragments from various sources, I aim to display the linked nature of geometry in nature and reproductions of it.   
+
+            	I aim to mimic the space of the web. By weaving together various paint applications and rendering styles into a single painting, I create a hybrid space full of layers and links. Through the process of simulating the experience of processing information on the web in paint, my paintings offer viewers an abstract playground where no single navigational architecture holds precedence over another (because there are no words). I aim to engage my viewers in an active viewing experience, so that my viewers will recognize this phenomenon when it occurs while navigating digital space.
+            </li>
+        </ul>
+    
+		<div class="project-img-set">
+		<div class="artArt">
+            
+            <h2 class="newsCap">The Live Archive<b>2015. 6'x 3' Oil on canvas.</b></h2>
+            
+            <img srcset="images/AAFF-combined-cutBottom-xs.jpg">
+            <img srcset="images/grayscale_model-no-text-300res.jpg">
+        </div>
+
+
+       <div class="project-img-set">
+		<div class="artArt">
+            
+            <h2 class="newsCap">Undergraduate Senior Thesis work: Minecraft Landscapes <b>2014. ~42"x 32" Oil on canvas.</b></h2>
+            
+            <img srcset="images/minecraft/minecraft-ip-1-150res-1095.jpg 1024w, minecraft-ip-1-150res-482.jpg 700w, minecraft-ip-1-150res-201.jpg 320w" sizes="100vw">
+
+            <div class="data-imgBox">
+                    <img srcset="images/minecraft/minecraft-ip-2-150res-1095.jpg 1024w, minecraft-ip-2-150res-482.jpg 760w, minecraft-ip-2-150res-201.jpg 320w" sizes="100vw">
+                     <img srcset="images/minecraft/pinkRain_draft1_1800px.jpg">
+                     <img src="images/minecraft/pinkRain-det-1095w.jpg">
+            </div>
+
+            
+            <div class="data-imgBox">
+                <img srcset="images/minecraft/minecraft-ip-4-150res-1090.jpg 1024w, minecraft-ip-4-150res-482.jpg 760w, minecraft-ip-4-150res-201.jpg 320w" sizes="100vw">
+
+                <img src="images/minecraft/minecraft3-dark.jpg">
+                <img src="images/minecraft/minecraft3-det-1095w.jpg">
+            </div>
+
+
+
+            <img srcset="images/minecraft/minecraft-ip-5-150res-1112.jpg 1024w, minecraft-ip-5-150res-482.jpg 768w, minecraft-ip-5-150res-201.jpg 320w" sizes="100vw">
+
+            <img src="images/minecraft/minecraft-ip-3.jpg">
+
+        </div>
+
+        <div class="artArt">
+            <div class="data-imgBox">
+                <h2 class="newsCap"> Early Ideation: Squares on Squares, 2013. Oil on Canvas.</h2>
+                <img src="images/minecraft/slade-minecraft-150res-768.jpg">
+                <img src="images/minecraft/minecraft1.jpg">
+            </div>
+
+        </div>
+       
+
+
+      </div>
+
+
+      
+
+
+
+    </div>
 		</div>
-
-
+		
 	</div>
-
-</div>
-<div id="footer">
-	
-	<!-- <footer style="float:right;">
-		<p>some content doesn't contain direct sources.  Sorry for that, time needed to be prioritized for creating the content~HMW</p>
-	</footer> -->
 </div>
 
 
@@ -118,15 +165,12 @@ var $menu = $('#menu-items');
 $('#menu-items').find('a').on('click', function(e){
 	e.preventDefault();
 
-	var $desc = $('#project-description');
+	var $desc = $("#project-description");
 	
 	switch($(this).attr('href')) {
 		// artwork 
 		case 'artwork.html' :
-			$desc.load('fragments/labtest.html');
-			break;
-		case 'labtest.html' :
-			$desc.load('fragments/labtest.html');
+			$desc.load('fragments/livearchive.html');
 			break;
 		case 'minecraft.html' :
 			$desc.load('fragments/minecraft-img.html');
