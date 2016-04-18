@@ -1,26 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 ltie8 ltie9" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 ltie8 ltie9" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 ltie9" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-
+<html lang="en"> 
 <head>
 	<meta charset="utf-8" />
 	<title>Franny Mendes Levitin</title>
 	<link rel="stylesheet" href="style.css"/>
-
 	<link rel="stylesheet" media="(max-width: 800px)" href="media.css" />
 	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-	
-	
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	
-	<!--<script src="js/active1.js"></script>-->
-
-
-	
 </head>
 
  <style type="text/css">
@@ -38,10 +25,10 @@
 
 				<li class="cat" id="category1"><a href="artwork.html">Artwork</a>
 					<ul class="submenu" id="submenu1">
-						<li><a href="labtest.html" id="active">Lab Test Results</a></li>
-						<li><a href="minecraft.html">Navigation Spaces</a></li>
+						<li><a href="labtest.html" id="active">Live Archive</a></li>
+						<li><a href="minecraft.html">Navigation Landscapes</a></li>
 <!-- should i call navigation space minecraft landscapes? -->
-						<li><a href="landscape-what.html">What's landscape</a></li>
+						<!-- <li><a href="landscape-what.html">What's landscape</a></li> -->
 						<li><a href="data-info.html">Data or Information</a></li>
 						<li><a href="dig-phy.html">Digital Physical</a></li>
 					</ul>
@@ -52,32 +39,34 @@
 					<ul class="submenu" id="submenu2">
 						<li><a href="tumblr-h.html">Heuristic Evaluation on Tumblr</a></li>
 						<li><a href="burst.html">Mobile Application</a></li>
-						<li><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li>
-						<li><a href="photoshop-.html">Persona Creation: Harriet Who</a></li>
+						<li><a href="cavesPoster.html">Graphic Design</a></li>
+						<!-- <li><a href="photoshopUse.html">Usability testing on Photoshop CS6</a></li> -->
+						<!-- <li><a href="photoshop-.html">Persona Creation: Harriet Who</a></li> -->
 						<!-- <li><a href="ux-dialog.html">UX Realizations or discussion</a></li> -->
 					</ul>
 				</li>
 
 
-				<li class="cat" id="category3"><a href="graphicDesign.html">Design</a>
+				<li class="cat" id="category3"><a href="hacking.html">Hacking</a>
 					<ul class="submenu" id="submenu3">
-						<li><a href="caves-poster.html">Caves Poster</a></li>
-						<li><a href="burstLogo.html">Logo Design</a></li>
+						
+						<li><a href="teachmebackpack.html"></a>Dynamic Web-App</li>
 
 					</ul>
 				</li>
 
 
-				<li class="cat" id="category4"><a href="info.html">Info</a>
+				<li class="cat" id="category4"><a href="news.html">Info</a>
 					<ul class="submenu" id="submenu4">
-						<li><a href="info.html">About</a></li>
 						<li><a href="news.html">News</a></li>
+						<li><a href="info.html">About</a></li>
 						<li><a href="http://fmendesl.tumblr.com/archive/2014/3"></a></li>
 					</ul>
 				</li>
 			
 			</ul>
-	
+			
+		
 	
 	
 		</div>
@@ -95,28 +84,18 @@
 				</div>
 				<marquee id="gif" direction=left><img src="images/cover/fox.gif"></marquee>
 
-				<marquee id="gif" direction=left><img src="images/cover/laptops.gif"></marquee>
+				<!-- <marquee id="gif" direction=left><img src="images/cover/laptops.gif"></marquee> -->
 
-				<!-- <marquee id="gif" direction=left><img src="images/cover/horse.gif"></marquee> -->
 				<src img="images/cover/math.gif" class="coverGif">
 		
 				
 			</div>
 		</div>
 
-
-	</div>
-
 </div>
-<div class="flex flex-column copyRight">
+<div  id="footer" 	class="flex flex-column copyRight">
 	<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 	
-</div>
-<div id="footer">
-	
-	<!-- <footer style="float:right;">
-		<p>some content doesn't contain direct sources.  Sorry for that, time needed to be prioritized for creating the content~HMW</p>
-	</footer> -->
 </div>
 
 
@@ -165,11 +144,14 @@ $('#menu-items').find('a').on('click', function(e){
 		case 'burst.html' :
 			$desc.load('fragments/burst.html');
 			break;
-
-		// graphic Design 
-
-		case 'graphicDesign.html' :
+		case 'cavesPoster.html' :
 			$desc.load('fragments/cavesPoster.html');
+			break;
+
+		// programming 
+
+		case 'hacking.html' :
+			$desc.load('fragments/teachmebackpack.html');
 			break;
 		case 'burstLogo.html' :
 			$desc.load('fragments/burstLogo.html');
@@ -177,10 +159,10 @@ $('#menu-items').find('a').on('click', function(e){
 
 		// info 
 
-		case 'info.html' :
-			$desc.load('fragments/info.html');
+		case 'news.html' :
+			$desc.load('fragments/news.html');
 			break;
-		case 'about.html' :
+		case 'info.html' :
 			$desc.load('fragments/info.html');
 			break;
 		case 'news.html' :
